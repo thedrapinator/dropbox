@@ -37,8 +37,8 @@ SSH into Public Azure IP of server using credentials chosen during setup
 Then power on the dropbox and run the dropbox setup script: 
 
   git clone http://github.com/sirchsec/dropbox.git
-  chmod +x dropbox_setup.sh
-  sudo ./dropbox_setup.sh
-
-  chmod +x dropbox_tools.sh
-  sudo ./dropbox_tools.sh
+	chmod +x dropbox_setup.sh
+	sudo ./dropbox_setup.sh
+	
+	chmod +x dropbox_tools.sh
+	sudo ./dropbox_tools.sh
