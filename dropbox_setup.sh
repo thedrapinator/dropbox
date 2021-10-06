@@ -46,6 +46,9 @@ sudo update-rc.d xrdp enable
 echo "Disabling Sleep"
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 
+#Script out lid close action but for now: 
+echo "Go into Tweak tool. Click on power. There is an option to not suspend when lid is closed."
+
 echo "REBOOTING IN 10 SECONDS……"
 sleep 10
 
