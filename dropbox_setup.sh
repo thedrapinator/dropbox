@@ -43,6 +43,10 @@ service xrdp start
 service xrdp-sesman start
 update-rc.d xrdp enable
 
+echo "Enabling SSH"
+sudo systemctl enable ssh.service
+systemctl start ssh.service
+
 echo "Disabling Sleep"
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 
