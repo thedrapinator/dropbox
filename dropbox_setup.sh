@@ -1,14 +1,14 @@
 #!/bin/bash
 
 #jumphost username
-echo "Please enter jumphost username!"
-read username
-echo "JUMPHOST USERNAME = $username"
+#echo "Please enter jumphost username!"
+#read username
+#echo "JUMPHOST USERNAME = $username"
 
 #jumphost IP
-echo "Please enter jumphost public IP address!"
-read ip
-echo "JUMPHOST IP = $ip"
+#echo "Please enter jumphost public IP address!"
+#read ip
+#echo "JUMPHOST IP = $ip"
 
 echo "Set new sudo password for kali user before running this script!"
 sleep 1
@@ -24,7 +24,7 @@ fi
 
 echo "Please enter the ovpn file name which will be copied from jumphost home folder!"
 read filename
-sudo scp $username@$ip:/home/$username/$filename /home/kali/$filename
+#sudo scp $username@$ip:/home/$username/$filename /home/kali/$filename
 sudo cp /home/kali/$filename /etc/openvpn/openvpn.conf
 sudo systemctl enable openvpn
 echo "Copied and enabled dropbox openvpn file!"
@@ -39,9 +39,9 @@ sudo apt update && sudo apt upgrade -y
 
 echo "Installing and enabling RDP"
 sudo apt install xrdp -y
-sudo service xrdp start
-sudo service xrdp-sesman start
-sudo update-rc.d xrdp enable
+service xrdp start
+service xrdp-sesman start
+update-rc.d xrdp enable
 
 echo "Disabling Sleep"
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
