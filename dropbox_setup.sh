@@ -1,11 +1,13 @@
 #!/bin/bash
 
 #jumphost username
-username=pentest  
+echo "Please enter jumphost username!"
+read username
 echo "JUMPHOST USERNAME = $username"
 
 #jumphost IP
-ip=104.211.13.163
+echo "Please enter jumphost public IP address!"
+read ip
 echo "JUMPHOST IP = $ip"
 
 echo "Set new sudo password for kali user before running this script!"
@@ -20,11 +22,11 @@ else
         exit 1
 fi
 
-echo "Please enter dropbox number!"
-read dropnum
-scp $username@$ip:/home/$username/dropbox$dropnum.conf /home/kali/dropbox$dropnum.conf
-cp /home/kali/dropbox$dropnum.conf /etc/openvpn/openvpn.conf
-systemctl enable openvpn
+echo "Please enter the ovpn file name which will be copied from jumphost home folder!"
+read filename
+sudo scp $username@$ip:/home/$username/$filename /home/kali/$filename
+sudo cp /home/kali/$filename /etc/openvpn/openvpn.conf
+sudo systemctl enable openvpn
 echo "Copied and enabled dropbox openvpn file!"
 
 echo "Please enter new hostname (companyname):"
@@ -33,18 +35,18 @@ sudo hostnamectl set-hostname $hostname
 echo "Hostname set to $hostname"
 
 echo "UPDATING"
-apt update && apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 
 echo "Installing and enabling RDP"
-apt install xrdp -y
-service xrdp start
-service xrdp-sesman start
-update-rc.d xrdp enable
+sudo apt install xrdp -y
+sudo service xrdp start
+sudo service xrdp-sesman start
+sudo update-rc.d xrdp enable
 
 echo "Disabling Sleep"
-systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 
 echo "REBOOTING IN 10 SECONDS……"
 sleep 10
 
-reboot
+sudo reboot
