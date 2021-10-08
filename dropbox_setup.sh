@@ -26,6 +26,7 @@ echo "Please enter the ovpn file name which will be copied from the /hoem/kali/ 
 read filename
 #sudo scp $username@$ip:/home/$username/$filename /home/kali/$filename
 sudo cp /home/kali/$filename /etc/openvpn/openvpn.conf
+sudo rm /home/kali/$filename
 sudo systemctl enable openvpn
 echo "Copied and enabled dropbox openvpn file!"
 
