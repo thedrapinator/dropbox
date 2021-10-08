@@ -22,7 +22,7 @@ else
         exit 1
 fi
 
-echo "Please enter the ovpn file name which will be copied from the /hoem/kali/ folder!"
+echo "Please enter the ovpn file name which will be copied from the /home/kali/ folder!"
 read filename
 #sudo scp $username@$ip:/home/$username/$filename /home/kali/$filename
 sudo cp /home/kali/$filename /etc/openvpn/openvpn.conf
