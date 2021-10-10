@@ -22,6 +22,9 @@ else
         exit 1
 fi
 
+echo "Disabling Sleep"
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+
 echo "Please enter the ovpn file name which will be copied from the /home/kali/ folder!"
 read filename
 #sudo scp $username@$ip:/home/$username/$filename /home/kali/$filename
@@ -47,9 +50,6 @@ update-rc.d xrdp enable
 echo "Enabling SSH"
 sudo systemctl enable ssh.service
 systemctl start ssh.service
-
-echo "Disabling Sleep"
-sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 
 echo "REBOOTING IN 10 SECONDS……"
 sleep 10
