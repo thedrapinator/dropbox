@@ -38,8 +38,9 @@ sudo ./azure_setup.sh
 <h4>Then power on the dropbox and run the dropbox setup script:</h4> 
 
 git clone http://github.com/sirchsec/dropbox.git  
+cd dropbox
 chmod +x dropbox_setup.sh  
 sudo ./dropbox_setup.sh  
-	
+
 chmod +x dropbox_tools.sh  
 sudo ./dropbox_tools.sh  
