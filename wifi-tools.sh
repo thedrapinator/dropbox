@@ -14,11 +14,9 @@ fi
 
 echo "Configuring wifi adapter"
 sudo ip link set $interface down
+sudo iw $interface set txpower fixed 3000
 sudo iw dev $interface set type monitor
 sudo ip link set $interface up
-
-echo "Setting TX to MAX Power!!!!!!!!"
-sudo iw $interface set txpower fixed 3000
 
 echo "Installing Tools..."
 sudo apt update
