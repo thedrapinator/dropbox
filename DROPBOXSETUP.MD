@@ -44,16 +44,17 @@ Equipment used:
 30. Proceed to install the tools our team needs for the new kali install
 
 
-# Backing up the Dropbox SD to an image for restorability
-Literally just follow this guide that shows how to do it with Win32 Disk Imager:
+# Backing up the Dropbox SD Image
+This creates a backup of the SD card (ideal for a master image)that can be written to a new, blank SD (essentially copying all content)
+Follow this guide detailing the process with Win32 Disk Imager:
 https://www.howtogeek.com/341944/how-to-clone-your-raspberry-pi-sd-card-for-foolproof-backup/
 
-# To change IPs of OpenVPN clients
+# Change IPs of OpenVPN Clients
 - `sudo nano /etc/openvpn/server/[new_file]`- edit with a list copied from /etc/openvpn/server/ipp.txt
 - `sudo nano /etc/openvpn/server/server.conf` (edit line ifconfig-pool-persist ipp.txt)
 - Change ipp.txt in the server-conf file to make it what you named "new_file" earlier
 
-# Modify pentester's vpn route table 
+# Modify Pentester's VPN Route Table 
 NOTE: This diables the VPN from routing all other traffic from your host machine over the vpn server (the result is significantly less congestion)
 
 A modification needs to be made in the client ovpn file. Open the [name].ovpn file and edit add the following lines to the config:
