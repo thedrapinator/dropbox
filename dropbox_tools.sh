@@ -26,6 +26,9 @@ git clone https://github.com/PowerShellMafia/PowerSploit.git
 echo "INSTALLING SecLists…"
 git clone https://github.com/danielmiessler/SecLists.git
 
+echo "INSTALLING Wifi Drivers..."
+sudo apt install realtek-rtl88xxau-dkms
+
 echo "OPENING LINKS FOR OTHER TOOLS!"
 sleep 1
 echo "https://portswigger.net/burp/documentation/desktop/getting-started"
