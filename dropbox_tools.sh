@@ -26,6 +26,9 @@ git clone https://github.com/PowerShellMafia/PowerSploit.git
 echo "INSTALLING SecLis..."
 git clone https://github.com/danielmiessler/SecLists.git
 
+echo "INSTALLING winPEAS..."
+git clone https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS
+
 echo "Updating Searchsploit DB..."
 searchsploit --update
 
