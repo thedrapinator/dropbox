@@ -11,13 +11,14 @@ fi
 
 cd ~
 echo "UPDATING…"
-apt update && apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 
 echo "INSTALLING OPENVPN…"
 wget https://git.io/vpn -O openvpn-install.sh
 sudo chmod +x openvpn-install.sh
 sudo ./openvpn-install.sh
 
-systemctl enable openvpn
+sudo systemctl enable openvpn
+
 echo "INSTALL COMPLETE! 
 echo "To add users or dropboxes please run sudo ./openvpn-install.sh and name the dropboxes dropbox1, dropbox2, etc…"
