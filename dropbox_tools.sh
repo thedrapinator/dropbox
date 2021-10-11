@@ -31,6 +31,11 @@ git clone https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS.git
 
 echo "INSTALLING Wifi Drivers..."
 sudo apt install realtek-rtl88xxau-dkms -y
+
+echo "Cleaning Up..."
+sudo apt autoclean
+sudo apt autoremove -y
+
 sleep 1
 echo "Please manually update Searchsploit DB (searchsploit --update)"
 #searchsploit --update
