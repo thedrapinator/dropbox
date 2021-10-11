@@ -5,7 +5,7 @@ sleep 1
 
 if [ `id -u` -eq 0 ]
 then
-        echo "Running as root user :)"
+        echo "Running as sudo user :)"
 else
         echo "Please run with sudo!"
         exit 1
