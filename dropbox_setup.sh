@@ -45,6 +45,10 @@ echo "Enabling SSH"
 sudo systemctl enable ssh.service
 systemctl start ssh.service
 
+echo "Cleaning Up..."
+sudo apt autoclean
+sudo apt -y autoremove
+
 echo "REBOOTING IN 10 SECONDS……"
 sleep 10
 
