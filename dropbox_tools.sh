@@ -30,7 +30,7 @@ echo "Updating Searchsploit DB..."
 searchsploit --update
 
 echo "INSTALLING Wifi Drivers..."
-sudo apt install realtek-rtl88xxau-dkms
+sudo apt install realtek-rtl88xxau-dkms -y
 
 echo "OPENING LINKS FOR OTHER TOOLS!"
 sleep 1
