@@ -11,6 +11,25 @@ else
         exit 1
 fi
 
+## Brute force login tools
+sudo apt install brutespray -y
+
+## AD Testing Tools
+sudo apt install ldapscripts bloodhound veil -y
+
+### Install exploit compiling packages
+sudo apt install mingw-w64 -y
+sudo apt install g++-multilib -y
+
+## Remove dos NSE Scripts
+sudo rm /usr/share/nmap/scripts/broadcast-avahi-dos.nse
+sudo rm /usr/share/nmap/scripts/smb-vuln-regsvc-dos.nse
+
+## Additional Random Tools
+sudo apt install seclists curl enum4linux feroxbuster impacket-scripts nbtscan nikto nmap onesixtyone oscanner redis-tools smbclient smbmap snmp sslscan sipvicious tnscmd10g whatweb wkhtmltopdf -y
+sudo apt install gedit nfs-common python3-pip libimage-exiftool-perl -y
+
+
 echo "CLONING TOOLS INTO /opt"
 cd /opt
 
