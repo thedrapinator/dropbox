@@ -22,7 +22,6 @@ sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.ta
 
 echo "Please enter the ovpn file name which will be copied from the /home/$username/ folder!"
 read filename
-#sudo scp $username@$ip:/home/$username/$filename /home/kali/$filename
 sudo cp /home/$username/$filename /etc/openvpn/openvpn.conf
 sudo rm /home/$username/$filename
 sudo systemctl enable openvpn
