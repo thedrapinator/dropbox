@@ -46,8 +46,10 @@ pip2 install psycopg2-binary
 pip2 install scapy   # if fail sudo apt-get install python-scapy
 python setup.py clean build install
 
+echo "Setting adapter to monitor mode!!!"
+sudo ip link set wlan0 down; sudo iw dev wlan0 set type monitor; sudo ip link set wlan0 up
 
-echo "Start test with (wifite -i <INTERFACE>)"
+echo "Start test with (sudo wifite -i <INTERFACE>)"
 
 ### Add eaphammer tools ####
 
