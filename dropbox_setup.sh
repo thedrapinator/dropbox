@@ -11,9 +11,9 @@ sleep 1
 #Sudo Check
 if [ `id -u` -eq 0 ]
 then
-        echo "Running as root user :)"
+        echo "Running as user with sudo privs :)"
 else
-        echo "Please run with sudo!"
+        echo "Please run with standard (NON ROOT) user and sudo!"
         exit 1
 fi
 
