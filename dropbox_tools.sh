@@ -18,7 +18,7 @@ echo "INSTALLING Impacket..."
 git clone https://github.com/SecureAuthCorp/impacket.git
 
 echo "INSTALLING Mit..."
-git clone https://github.com/fox-it/mitm6
+git clone https://github.com/fox-it/mitm6.git
 
 echo "INSTALLING PowerTools..."
 git clone https://github.com/PowerShellMafia/PowerSploit.git
