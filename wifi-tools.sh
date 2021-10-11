@@ -47,15 +47,13 @@ python setup.py clean build install
 echo "Setting adapter to monitor mode!!!"
 sudo ip link set wlan0 down; sudo iw dev wlan0 set type monitor; sudo ip link set wlan0 up
 
-echo "Start test with (sudo wifite -i <INTERFACE>)"
-
 ### Add eaphammer tools ####
+echo "INSTALLING EAP HAMMER!!!"
+cd /opt/
+git clone https://github.com/s0lst1c3/eaphammer.git
+pip3 install pem
+cd /opt/eaphammer
+sudo ./kali-setup
 
-
-
-
-
-
-
-
-
+echo "Start test with (sudo wifite -i <INTERFACE>)"
+echo "RUN eaphammer with (sudo ./eaphammer --cert-wizard interactive)
