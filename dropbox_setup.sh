@@ -1,16 +1,11 @@
 #!/bin/bash
 
-#jumphost username
-#echo "Please enter jumphost username!"
-#read username
-#echo "JUMPHOST USERNAME = $username"
+#dropbox username
+echo "Please enter dropbox username! (usually kali or pentest)"
+read username
+echo "USERNAME = $username"
 
-#jumphost IP
-#echo "Please enter jumphost public IP address!"
-#read ip
-#echo "JUMPHOST IP = $ip"
-
-echo "Set new sudo password for kali user before running this script!"
+echo "Set new sudo password for $username user before running this script!"
 sleep 1
 
 #Sudo Check
@@ -25,11 +20,11 @@ fi
 echo "Disabling Sleep"
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 
-echo "Please enter the ovpn file name which will be copied from the /home/kali/ folder!"
+echo "Please enter the ovpn file name which will be copied from the /home/$username/ folder!"
 read filename
 #sudo scp $username@$ip:/home/$username/$filename /home/kali/$filename
-sudo cp /home/kali/$filename /etc/openvpn/openvpn.conf
-sudo rm /home/kali/$filename
+sudo cp /home/$username/$filename /etc/openvpn/openvpn.conf
+sudo rm /home/$username/$filename
 sudo systemctl enable openvpn
 echo "Copied and enabled dropbox openvpn file!"
 
