@@ -29,12 +29,12 @@ git clone https://github.com/danielmiessler/SecLists.git
 echo "INSTALLING winPEAS..."
 git clone https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS.git
 
-echo "Updating Searchsploit DB..."
-searchsploit --update
-
 echo "INSTALLING Wifi Drivers..."
 sudo apt install realtek-rtl88xxau-dkms -y
-
+sleep 1
+echo "Please manually update Searchsploit DB (searchsploit --update)"
+#searchsploit --update
+sleep 1
 echo "OPENING LINKS FOR OTHER TOOLS!"
 sleep 1
 echo "https://portswigger.net/burp/documentation/desktop/getting-started"
