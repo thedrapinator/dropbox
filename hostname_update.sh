@@ -1,4 +1,4 @@
-#!/bin/bash
+333#!/bin/bash
 if [ "$EUID" -ne 0 ]
 	then echo "Please run as root"
 	exit
@@ -6,7 +6,7 @@ fi
 
 echo #### Setting Hostname ####
 echo "Enter New Host Name [dropbox name OR company name]"
-read -p 'Hostname: ' newhostname
+read -p 'Hostname: ' hostname
 sudo hostnamectl set-hostname $hostname
 echo "Hostname set to $hostname"
 
