@@ -17,17 +17,17 @@ cd /opt
 echo "INSTALLING Impacket..."
 git clone https://github.com/SecureAuthCorp/impacket.git
 
-echo "INSTALLING Mit..."
+echo "INSTALLING Mitm6..."
 git clone https://github.com/fox-it/mitm6.git
 
 echo "INSTALLING PowerTools..."
 git clone https://github.com/PowerShellMafia/PowerSploit.git
 
-echo "INSTALLING SecLis..."
+echo "INSTALLING SecLists..."
 git clone https://github.com/danielmiessler/SecLists.git
 
 echo "INSTALLING winPEAS..."
-git clone https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS.git
+https://github.com/carlospolop/PEASS-ng.git
 
 echo "INSTALLING Wifi Drivers..."
 sudo apt install realtek-rtl88xxau-dkms -y
