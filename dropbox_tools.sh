@@ -62,9 +62,6 @@ sleep 1
 echo "OPENING LINKS FOR OTHER TOOLS!"
 sleep 1
 echo "https://portswigger.net/burp/documentation/desktop/getting-started"
-
 echo "https://www.tenable.com/downloads/nessus"
-
 echo "https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/"
-
 echo "https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-basic/"
