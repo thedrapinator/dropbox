@@ -14,17 +14,20 @@ fi
 echo "CLONING TOOLS INTO /opt"
 cd /opt
 
-echo "INSTALLING Impacket…"
+echo "INSTALLING Impacket..."
 git clone https://github.com/SecureAuthCorp/impacket.git
 
-echo "INSTALLING Mitm6…"
+echo "INSTALLING Mit..."
 git clone https://github.com/fox-it/mitm6
 
-echo "INSTALLING PowerTools…"
+echo "INSTALLING PowerTools..."
 git clone https://github.com/PowerShellMafia/PowerSploit.git
 
-echo "INSTALLING SecLists…"
+echo "INSTALLING SecLis..."
 git clone https://github.com/danielmiessler/SecLists.git
+
+echo "Updating Searchsploit DB..."
+searchsploit --update
 
 echo "INSTALLING Wifi Drivers..."
 sudo apt install realtek-rtl88xxau-dkms
