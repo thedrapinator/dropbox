@@ -1,0 +1,41 @@
+#!/bin/bash
+
+username=pentest
+hostname=master
+filename=master.ovpn
+
+#Sudo Check
+if [ `id -u` -eq 0 ]
+then
+        echo "Running as user with sudo privs :)"
+else
+        echo "Please run with standard (NON ROOT) user and sudo!"
+        exit 1
+fi
+
+
+#dropbox username
+#echo "Please enter dropbox username! (usually pentest)"
+#read username
+#echo "USERNAME = $username"
+
+#echo "Please enter the ovpn file name which will be copied from the /home/$username/ folder!"
+#read filename
+
+# if ovpn file does not exist then exit
+if [ ! -f /home/$username/$filename ]
+then
+    echo "$filename not found. Exiting!"
+    exit 1
+else
+    echo "File found. Copying now..."
+fi
+
+sudo cp /home/$username/$filename /etc/openvpn/openvpn.conf
+#sudo rm /home/$username/$filename
+sudo systemctl enable openvpn
+echo "Copied and enabled dropbox openvpn file!"
+
+echo "REBOOTING IN 10 SECONDS......."
+sleep 10
+sudo reboot
