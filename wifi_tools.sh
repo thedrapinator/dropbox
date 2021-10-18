@@ -46,12 +46,12 @@ python setup.py clean build install
 
 ### Add eaphammer tools ####
 echo "INSTALLING EAP HAMMER!!!"
-sudo apt install eaphammer -y
-#cd /opt/
-#sudo git clone https://github.com/s0lst1c3/eaphammer.git
-#pip3 install pem
-#cd /opt/eaphammer
-#sudo ./kali-setup
+#sudo apt install eaphammer -y
+cd /opt/
+sudo git clone https://github.com/s0lst1c3/eaphammer.git
+pip3 install pem
+cd /opt/eaphammer
+sudo ./kali-setup
 
 echo "Setting adapter to monitor mode!!!"
 sudo ip link set wlan0 down; sudo iw dev wlan0 set type monitor; sudo ip link set wlan0 up
