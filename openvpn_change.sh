@@ -38,12 +38,12 @@ echo "Copied and enabled dropbox openvpn file!"
 
 
 ### Reboot Prompt
-read -p "Do you want to reboot? y/n: " prompt
+read -p "New openvpn cert ($filename) is installed. Do you want to reboot? y/n: " prompt
 if [[ "$prompt" =~ ^([yY][eE][sS]|[yY])$  ]]
   then
     echo "REBOOTING IN 5 SECONDS......."
     sleep 5
     sudo reboot
   else
-    echo "Reboot Skipped. It is recommended to reboot!"
+    echo "Reboot Skipped. It is recommended to reboot!!!!!!"
 fi
