@@ -18,7 +18,7 @@ sudo iw $interface set txpower fixed 3000
 sudo iw dev $interface set type managed
 sudo ip link set $interface up
 
-#If cert error on run 
+#OPTION to setup on run 
 echo "CONFIGURE eaphammer with (sudo /opt/eaphammer/eaphammer --cert-wizard interactive)"
 
 
