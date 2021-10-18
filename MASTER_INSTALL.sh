@@ -11,9 +11,9 @@ fi
 
 echo "###### CLONING LATEST FILES ######"
 cd /opt/
-sudo git clone https://github.com/sirchsec/dropbox.git
+git clone https://github.com/sirchsec/dropbox.git
 cd /opt/dropbox
-sudo chmod +x /opt/dropbox/*
+sudo chmod +x /opt/dropbox/*.sh
 
 
 ### Reboot Prompt
@@ -36,5 +36,5 @@ sudo /opt/dropbox/dropbox_tools.sh
 echo "###### RUNNING WIFI TOOLS SCRIPT ######"
 sudo /opt/dropbox/wifi_tools.sh
 
-echo "###### CHANGING TO OPENVPN MASTER FILE ######"   #COMTAINS REBOOT PROMPT
+echo "###### CHANGING TO OPENVPN MASTER FILE ######"   #CONTAINS REBOOT PROMPT
 sudo /opt/dropbox/openvpn_change.sh
