@@ -19,9 +19,9 @@ echo "###### RUNNING DROPBOX SETUP SCRIPT ######"
 sudo /opt/dropbox/dropbox_setup.sh
 
 echo "###### RUNNING DROPBOX TOOLS SCRIPT ######"
-sudo dropbox_tools.sh
+sudo /opt/dropbox/dropbox_tools.sh
 
 echo "###### RUNNING WIFI TOOLS SCRIPT ######"
-sudo wifi_tools.sh
+sudo /opt/dropbox/wifi_tools.sh
 
 echo "###### PLEASE REBOOT ######"
