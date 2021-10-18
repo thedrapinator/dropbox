@@ -55,7 +55,7 @@ cd /opt/eaphammer
 sudo ./kali-setup
 
 echo "Setting adapter to monitor mode!!!"
-sudo ip link set $interface down; sudo iw $interface set txpower fixed 3000; sudo iw dev $interface set type monitor; sudo ip link set $interface up
+sudo ip link set $interface down; sudo iw $interface set txpower fixed 3000; sudo iw dev $interface set type managed; sudo ip link set $interface up
 
 echo "Start test with (sudo wifite -i $interface)"
 echo "CONFIGURE eaphammer with (sudo ./eaphammer --cert-wizard interactive)
