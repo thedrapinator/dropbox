@@ -43,7 +43,7 @@ echo "Installing Pyrit..."
 cd /opt/pyrit
 pip2 install psycopg2-binary
 pip2 install scapy   # if fail sudo apt-get install python-scapy
-python setup.py clean build install
+sudo python setup.py clean build install
 
 ### Add eaphammer tools ####
 echo "INSTALLING EAP HAMMER!!!"
