@@ -36,6 +36,14 @@ sudo cp /home/$username/$filename /etc/openvpn/openvpn.conf
 sudo systemctl enable openvpn
 echo "Copied and enabled dropbox openvpn file!"
 
-echo "REBOOTING IN 10 SECONDS......."
-sleep 10
-sudo reboot
+
+### Reboot Prompt
+read -p "Do you want to reboot? y/n: " prompt
+if [[ "$prompt" =~ ^([yY][eE][sS]|[yY])$  ]]
+  then
+    echo "REBOOTING IN 5 SECONDS......."
+    sleep 5
+    sudo reboot
+  else
+    echo "Reboot Skipped. It is recommended to reboot!"
+fi
