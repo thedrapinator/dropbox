@@ -15,6 +15,18 @@ sudo git clone https://github.com/sirchsec/dropbox.git
 cd /opt/dropbox
 sudo chmod +x /opt/dropbox/*
 
+
+### Reboot Prompt
+read -p "Do you want to install all tools? y/n: " prompt
+if [[ "$prompt" =~ ^([yY][eE][sS]|[yY])$  ]]
+  then
+    echo "INSTALLING...."
+  else
+    echo "###### RUNNING ONLY INITIAL SETUP SCRIPT ######"
+    sudo /opt/dropbox/dropbox_setup.sh
+    exit 1
+fi
+
 echo "###### RUNNING DROPBOX SETUP SCRIPT ######"
 sudo /opt/dropbox/dropbox_setup.sh
 
