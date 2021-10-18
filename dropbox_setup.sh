@@ -27,6 +27,16 @@ sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.ta
 
 #echo "Please enter the ovpn file name which will be copied from the /home/$username/ folder!"
 #read filename
+
+# if ovpn file does not exist then exit
+if [ ! -f /home/$username/$filename ]
+then
+    echo "$filename not found. Exiting!"
+    exit 1
+else
+    echo "File found. Copying now..."
+fi
+
 sudo cp /home/$username/$filename /etc/openvpn/openvpn.conf
 #sudo rm /home/$username/$filename
 sudo systemctl enable openvpn
