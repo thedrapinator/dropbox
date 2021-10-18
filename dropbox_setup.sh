@@ -49,7 +49,5 @@ echo "Cleaning Up..."
 sudo apt autoclean
 sudo apt -y autoremove
 
-echo "REBOOTING IN 10 SECONDS……"
-sleep 10
-
-sudo reboot
+echo "RECOMMEND REBOOT AFTER SCRIPT FINISHES……"
+sleep 3
