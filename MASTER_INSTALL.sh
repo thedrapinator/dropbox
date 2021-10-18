@@ -24,4 +24,5 @@ sudo /opt/dropbox/dropbox_tools.sh
 echo "###### RUNNING WIFI TOOLS SCRIPT ######"
 sudo /opt/dropbox/wifi_tools.sh
 
-echo "###### PLEASE REBOOT ######"
+echo "###### CHANGING TO OPENVPN MASTER FILE ######"   #COMTAINS REBOOT PROMPT
+sudo /opt/dropbox/openvpn_change.sh
