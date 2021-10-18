@@ -18,4 +18,8 @@ sudo iw $interface set txpower fixed 3000
 sudo iw dev $interface set type managed
 sudo ip link set $interface up
 
+#If cert error on run 
+echo "CONFIGURE eaphammer with (sudo /opt/eaphammer/eaphammer --cert-wizard interactive)"
+
+
 echo "adjust to needs and run: /opt/eaphammer/eaphammer -i wlan0 --channel 4 --auth wpa-eap --essid CorpWifi --creds"
