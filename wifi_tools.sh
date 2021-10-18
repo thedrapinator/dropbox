@@ -46,7 +46,7 @@ python setup.py clean build install
 
 ### Add eaphammer tools ####
 echo "INSTALLING EAP HAMMER!!!"
-#sudo apt install eaphammer -y
+#sudo apt install eaphammer -y  #This package is broken
 cd /opt/
 sudo git clone https://github.com/s0lst1c3/eaphammer.git
 pip3 install pem
