@@ -20,7 +20,7 @@ fi
 #echo "USERNAME = $username"
 
 echo "Please enter the ovpn file name which will be copied from the /home/$username/ folder!"
-read filename
+read -p 'Filename: ' filename
 
 # if ovpn file does not exist then exit
 if [ ! -f /home/$username/$filename ]
@@ -35,6 +35,13 @@ sudo cp /home/$username/$filename /etc/openvpn/openvpn.conf
 #sudo rm /home/$username/$filename
 sudo systemctl enable openvpn
 echo "Copied and enabled dropbox openvpn file!"
+
+
+echo #### Setting Hostname ####
+echo "Enter New Host Name [dropbox name]"
+read -p 'Hostname: ' hostname
+sudo hostnamectl set-hostname $hostname
+echo "Hostname set to $hostname"
 
 
 ### Reboot Prompt
