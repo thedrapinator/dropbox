@@ -1,8 +1,8 @@
 #!/bin/bash
 
 username=pentest
-hostname=master
-filename=master.ovpn
+#hostname=master
+#filename=master.ovpn
 
 #Sudo Check
 if [ `id -u` -eq 0 ]
@@ -19,8 +19,8 @@ fi
 #read username
 #echo "USERNAME = $username"
 
-#echo "Please enter the ovpn file name which will be copied from the /home/$username/ folder!"
-#read filename
+echo "Please enter the ovpn file name which will be copied from the /home/$username/ folder!"
+read filename
 
 # if ovpn file does not exist then exit
 if [ ! -f /home/$username/$filename ]
