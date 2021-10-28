@@ -45,7 +45,7 @@ echo "Copied and enabled dropbox openvpn file!"
 #echo "Please enter new hostname (companyname):"
 #read hostname
 sudo hostnamectl set-hostname $hostname
-sudo echo 127.0.0.1 localhost $(hostname) >> /etc/hosts   #new line to fix sudo issue
+sed -I "s/127.0.1.1.*/127.0.1.1\t$hostname/g" /etc/hosts
 echo "Hostname set to $hostname"
 
 echo "UPDATING"
