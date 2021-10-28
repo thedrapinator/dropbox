@@ -8,6 +8,7 @@ echo #### Setting Hostname ####
 echo "Enter New Host Name [dropbox name OR company name]"
 read -p 'Hostname: ' hostname
 sudo hostnamectl set-hostname $hostname
+sudo echo 127.0.0.1 localhost $(hostname) >> /etc/hosts   #new line to fix sudo issue
 echo "Hostname set to $hostname"
 
 ## OLD WAY
