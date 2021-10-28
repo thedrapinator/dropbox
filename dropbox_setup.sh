@@ -61,6 +61,10 @@ echo "Enabling SSH"
 sudo systemctl enable ssh.service
 systemctl start ssh.service
 
+echo "Enabling NTP"
+sudo timedatectl set-timezone America/New_York
+sudo timedatectl set-ntp on
+
 echo "Cleaning Up..."
 sudo apt autoclean
 sudo apt -y autoremove
