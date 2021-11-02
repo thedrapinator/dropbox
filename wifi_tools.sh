@@ -21,6 +21,7 @@ fi
 
 echo "Installing Tools..."
 sudo apt update
+sudo apt install realtek-rtl88xxau-dkms -y
 sudo apt install macchanger wifite python2.7 build-essential python2-dev libpcap-dev libssl-dev hcxdumptool hcxtools -y
 
 echo "CLONING ADDITIONAL TOOLS INTO /opt"
