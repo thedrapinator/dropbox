@@ -23,3 +23,4 @@ echo "CONFIGURE eaphammer with (sudo /opt/eaphammer/eaphammer --cert-wizard inte
 
 
 echo "adjust to needs and run: /opt/eaphammer/eaphammer -i wlan0 --channel 4 --auth wpa-eap --essid CorpWifi --creds"
+echo "./eaphammer -i wlan0  -c <channel> --auth wpa-psk --essid "HighSpeedGuestNetwork" --capture-wpa-handshakes yes"
