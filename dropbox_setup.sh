@@ -63,7 +63,8 @@ systemctl start ssh.service
 
 echo "Enabling NTP"
 sudo timedatectl set-timezone America/New_York
-sudo timedatectl set-ntp on
+sudo systemctl enable ntp.service
+sudo systemctl start ntp.service
 
 echo "Cleaning Up..."
 sudo apt autoclean
