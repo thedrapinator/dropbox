@@ -38,10 +38,12 @@ echo "Copied and enabled dropbox openvpn file!"
 
 
 echo #### Setting Hostname ####
-echo "Enter New Host Name [dropbox name]"
+echo "Enter New Host Name [dropbox name OR company name]"
 read -p 'Hostname: ' hostname
 sudo hostnamectl set-hostname $hostname
+sed -I "s/127.0.1.1.*/127.0.1.1\t$hostname/g" /etc/hosts
 echo "Hostname set to $hostname"
+
 
 
 ### Reboot Prompt
