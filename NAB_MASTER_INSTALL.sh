@@ -12,6 +12,7 @@ fi
 echo "###### CLONING LATEST FILES ######"
 cd /opt/
 sudo git clone https://github.com/sirchsec/dropbox.git
+sudo git clone https://github.com/sirchsec/openvpn.git
 cd /opt/dropbox
 sudo chmod +x /opt/dropbox/*.sh
 
