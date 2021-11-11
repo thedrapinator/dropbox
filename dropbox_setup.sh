@@ -1,8 +1,6 @@
 #!/bin/bash
 
 username=pentest
-filename=install.ovpn
-hostname=master
 
 #dropbox username
 #echo "Please enter dropbox username! (usually kali or pentest)"
@@ -25,11 +23,13 @@ fi
 echo "Disabling Sleep"
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 
-#echo "Please enter the ovpn file name which will be copied from the /home/$username/ folder!"
-#read filename
+echo "Please enter the machine name which is also the name of the openvpn file without the extension"
+read -p 'Hostname: ' hostname
+
+$filename=$hostname.ovpn
 
 # if ovpn file does not exist then exit
-if [ ! -f /home/$username/$filename ]
+if [ ! -f /opt/openvpn/$filename ]
 then
     echo "$filename not found. Exiting!"
     exit 1
@@ -37,8 +37,8 @@ else
     echo "File found. Copying now..."
 fi
 
-sudo cp /home/$username/$filename /etc/openvpn/openvpn.conf
-#sudo rm /home/$username/$filename
+sudo cp /opt/openvpn/$filename /etc/openvpn/openvpn.conf
+#sudo rm /opt/openvpn/*
 sudo systemctl enable openvpn
 echo "Copied and enabled dropbox openvpn file!"
 
