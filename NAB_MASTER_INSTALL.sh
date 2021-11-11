@@ -27,6 +27,10 @@ if [[ "$prompt" =~ ^([yY][eE][sS]|[yY])$  ]]
     exit 1
 fi
 
+
+echo "###### INSTALLING PING CONNECTION SCRIPT ######"
+sudo echo "* * * * * /opt/dropbox/ping.sh" >> /etc/crontab
+
 echo "###### RUNNING DROPBOX SETUP SCRIPT ######"
 sudo /opt/dropbox/dropbox_setup.sh
 
