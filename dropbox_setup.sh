@@ -26,7 +26,7 @@ sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.ta
 echo "Please enter the machine name which is also the name of the openvpn file without the extension"
 read -p 'Hostname: ' hostname
 
-$filename=$hostname.ovpn
+filename=$hostname.ovpn
 
 # if ovpn file does not exist then exit
 if [ ! -f /opt/openvpn/$filename ]
