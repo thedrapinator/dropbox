@@ -40,10 +40,10 @@ Script will install everything automatically and reboot. Then its on the vpn and
 
 ###########################################################################################################
 
+# OLD INSTRUCTIONS
 
 ############################################################################################################
 
-#OLD INSTRUCTIONS
 
 
 # Setting up Kali on Pentest DropBoxes(Udoo x86 II Advanced Plus)
