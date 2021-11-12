@@ -38,7 +38,11 @@ enter hostname: Bee1   (select the correct number of the dropbox)
 
 Script will install everything automatically and reboot. Then its on the vpn and ready to go.
 
-##################################################################################################################################
+###########################################################################################################
+
+#OLD INSTRUCTIONS
+
+############################################################################################################
 
 # Setting up Kali on Pentest DropBoxes(Udoo x86 II Advanced Plus)
 Equipment used:
