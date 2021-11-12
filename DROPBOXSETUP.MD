@@ -1,3 +1,45 @@
+# Chris crappy MASTER INSTALL instructions
+
+power on and plug in ethernet
+
+create bootable kali usb and boot from it
+
+advanced options 
+
+automated install
+
+enter on everything till you get to username
+
+username: pentest
+pass: Pentest123!!!
+
+Use entire disk
+
+Select hard drive
+
+remove flashdrive and reboot when completed
+
+login as pentest
+
+`cd /opt/`
+`sudo git clone http://github.com/sirchsec/dropbox.git`
+
+`sudo chmod +x /opt/dropbox/NAB_MASTER_INSTALL.sh`
+`sudo /opt/dropbox/NAB_MASTER_INSTALL.sh`
+
+make sure keys are copied from jumphost into github folder with the proper filename. (example: Bee1.ovpn)
+
+enter your github username and password (or token)
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+
+select yes to update
+
+enter hostname: Bee1   (select the correct number of the dropbox)
+
+Script will install everything automatically and reboot. Then its on the vpn and ready to go.
+
+##################################################################################################################################
+
 # Setting up Kali on Pentest DropBoxes(Udoo x86 II Advanced Plus)
 Equipment used:
 - Windows 10 laptop
