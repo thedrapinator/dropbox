@@ -38,6 +38,13 @@ enter hostname: Bee1   (select the correct number of the dropbox)
 
 Script will install everything automatically and reboot. Then its on the vpn and ready to go.
 
+
+ADD STATIC IP
+
+/etc/openvpn/ccd/$hostname
+
+ifconfig-push <IP> 255.255.255.0
+
 ###########################################################################################################
 
 # OLD INSTRUCTIONS
