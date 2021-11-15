@@ -2,7 +2,7 @@
 
 power on and plug in ethernet
 
-create bootable kali usb and boot from it
+create bootable kali usb (easiest to use belenaetcher) and boot from it by pressing F7 while booting
 
 advanced options 
 
