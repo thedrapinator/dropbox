@@ -14,9 +14,17 @@ fi
 
 
 echo "Configuring wifi adapter"   # Moved to the end
-sudo ip link set $interface down
-sudo iw $interface set txpower fixed 3000
-sudo iw dev $interface set type managed
-sudo ip link set $interface up
+airmon-ng stop wlan0
+sleep 0.1
+service NetworkManager restart
+sleep 0.1
+iwconfig
+echo "Managed Mode!!!"
 
-echo "DONE!"
+
+
+#echo "Configuring wifi adapter"   # Moved to the end
+#sudo ip link set $interface down
+#sudo iw $interface set txpower fixed 3000
+#sudo iw dev $interface set type managed
+#sudo ip link set $interface up
