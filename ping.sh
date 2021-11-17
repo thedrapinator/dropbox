@@ -13,6 +13,6 @@ else
   touch /opt/dropbox/log/pingfaillog.txt   #Create file if not created
   date >> /opt/dropbox/log/pingfaillog.txt  #Write reboot date and time to log
   sleep 1   #small delay to ensure changes are saved
-  sudo systemctl restart openvpn  #Rebooting openvpn has same effect as reboot
-  #/sbin/shutdown -r   #soft reboot
+  #sudo systemctl restart openvpn  #Rebooting openvpn has same effect as reboot but maybe not if network manager is broken
+  /sbin/shutdown -r   #soft reboot
 fi
