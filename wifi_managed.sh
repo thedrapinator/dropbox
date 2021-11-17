@@ -16,7 +16,14 @@ fi
 echo "Configuring wifi adapter"   # Moved to the end
 airmon-ng stop wlan0
 sleep 0.1
+sudo ip link set $interface down
+sleep 0.1
+sudo iw dev $interface set type monitor
+sleep 0.1
+sudo iw dev $interface set type managed
 #service NetworkManager restart
+sleep 0.1
+sudo ip link set $interface up
 sleep 0.1
 iwconfig
 echo "Managed Mode!!!"
