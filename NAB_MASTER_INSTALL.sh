@@ -33,7 +33,7 @@ fi
 
 echo "###### INSTALLING PING CONNECTION SCRIPT ######"
 sudo chmod +x /opt/dropbox/ping.sh
-sudo echo "* * * * * /opt/dropbox/ping.sh" >> /etc/crontab
+sudo echo "0 * * * * /opt/dropbox/ping.sh" >> /etc/crontab
 
 echo "###### RUNNING DROPBOX SETUP SCRIPT ######"
 sudo /opt/dropbox/dropbox_setup.sh
