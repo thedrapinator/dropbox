@@ -16,9 +16,10 @@ fi
 echo "Configuring wifi adapter"   # Moved to the end
 
 
-sudo ifconfig wlan0 down
+sudo ifconfig $interface down
 sleep 0.1
-airmon-ng check kill
+#airmon-ng check kill
+sudo iw $interface set txpower fixed 3000
 sleep 0.1
 sudo iwconfig wlan0 mode monitor
 sleep 0.1
