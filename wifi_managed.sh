@@ -16,7 +16,7 @@ fi
 echo "Configuring wifi adapter"   # Moved to the end
 airmon-ng stop wlan0
 sleep 0.1
-service NetworkManager restart
+#service NetworkManager restart
 sleep 0.1
 iwconfig
 echo "Managed Mode!!!"
