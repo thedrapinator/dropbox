@@ -30,11 +30,6 @@ if [[ "$prompt" =~ ^([yY][eE][sS]|[yY])$  ]]
     exit 1
 fi
 
-
-echo "###### INSTALLING PING CONNECTION SCRIPT ######"
-sudo chmod +x /opt/dropbox/ping.sh
-sudo echo "0 * * * * /opt/dropbox/ping.sh" >> /etc/crontab
-
 echo "###### RUNNING DROPBOX SETUP SCRIPT ######"
 sudo /opt/dropbox/dropbox_setup.sh
 
@@ -47,7 +42,10 @@ sudo /opt/dropbox/wifi_tools.sh
 #echo "###### CHANGING TO OPENVPN MASTER FILE ######"   #CONTAINS REBOOT PROMPT
 #sudo /opt/dropbox/openvpn_change.sh
 
+echo "###### INSTALLING PING CONNECTION SCRIPT ######"
+sudo /opt/dropbox/install_ping.sh
+
 echo "###### REBOOTING IN 5 SECONDS ######"   #CONTAINS REBOOT PROMPT
 sleep 5
-/sbin/shutdown -r   #soft reboot
+sudo /sbin/shutdown -r now #soft reboot
 
