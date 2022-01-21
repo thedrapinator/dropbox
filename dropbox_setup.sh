@@ -41,6 +41,7 @@ sudo cp /home/pentest/$filename /etc/openvpn/openvpn.conf
 #sudo rm /opt/openvpn/*
 sudo systemctl enable openvpn
 echo "Copied and enabled dropbox openvpn file!"
+sudo rm /home/pentest/$filename
 
 #echo "Please enter new hostname (companyname):"
 #read hostname
