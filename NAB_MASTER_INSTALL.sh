@@ -12,9 +12,9 @@ fi
 echo "###### CLONING LATEST FILES ######"
 cd /opt/
 sudo git clone https://github.com/sirchsec/dropbox.git
-echo "TO CLONE OPENVPN PRIVATE KEY YOU WILL NEED GITHUB LOGIN PASSWORD OR IF YOU USE 2FA YOU NEED A TOKEN AS THE PASSWORD: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token." 
+#echo "TO CLONE OPENVPN PRIVATE KEY YOU WILL NEED GITHUB LOGIN PASSWORD OR IF YOU USE 2FA YOU NEED A TOKEN AS THE PASSWORD: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token." 
 sleep 1
-sudo git clone https://github.com/sirchsec/openvpn.git
+#sudo git clone https://github.com/sirchsec/openvpn.git
 cd /opt/dropbox
 sudo chmod +x /opt/dropbox/*.sh
 
