@@ -41,4 +41,4 @@ copy the openvpn cert to the home folder
 git clone http://github.com/sirchsec/dropbox.git  
 cd dropbox
 chmod +x *.sh  
-sudo ./NAB_M.sh
+sudo ./NAB_MASTER_INSTALL.sh
