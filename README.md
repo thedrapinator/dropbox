@@ -32,15 +32,13 @@ ssh pentest@[Public IP]
 sudo apt install git  
 git clone http://github.com/sirchsec/dropbox.git  
 sudo ./azure_setup.sh  
+Create an openvpn cert and copy the file to flash drive.
 
 ### CONFIGURING THE DROPBOX ###
 
 <h4>Then power on the dropbox and run the dropbox setup script:</h4> 
-
+copy the openvpn cert to the home folder
 git clone http://github.com/sirchsec/dropbox.git  
 cd dropbox
-chmod +x dropbox_setup.sh  
-sudo ./dropbox_setup.sh  
-
-chmod +x dropbox_tools.sh  
-sudo ./dropbox_tools.sh  
+chmod +x *.sh  
+sudo ./NAB_M.sh
