@@ -9,7 +9,7 @@ Image: Ubuntu Server 18.04 LTS
 Size: B1s (1 VCPUS, 1GB RAM)  
 Authentication type: Password  
 Username: pentest  
-Password: <fill out and store securely>  
+Password: [fill out and store securely]  
 Public inbound ports: HTTP, HTTPS, SSH  
 
 <h4>Under the “Disks” section, select “SSD”</h4>
@@ -28,7 +28,7 @@ Change “Name” to “Port_1194”
 Leave the rest as default and select “Add”  
 
 <h4>SSH into Public Azure IP of server using credentials chosen during setup:</h4>
-ssh pentest@<Public IP>  
+ssh pentest@[Public IP]  
 sudo apt install git  
 git clone http://github.com/sirchsec/dropbox.git  
 sudo ./azure_setup.sh  
