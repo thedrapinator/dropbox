@@ -11,6 +11,10 @@ sudo hostnamectl set-hostname $hostname
 sed -i "s/127.0.1.1.*/127.0.1.1\t$hostname/g" /etc/hosts
 echo "Hostname set to $hostname"
 
+#########  IF YOU GET SUDO ERROR  ##########
+#sudoedit -h 127.0.0.1 /etc/hosts
+############################################
+
 ## OLD WAY
 #echo $newhostname > /etc/hostname
 #hostname -b $newhostname
